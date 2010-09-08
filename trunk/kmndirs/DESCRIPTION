@@ -1,0 +1,9 @@
+Package: kmndirs
+Version: 0.0-0
+Title: k-Mean-Directions Algorithm
+Description: An R interface to the k-Mean-Directions Algorithm of Maitra
+  and Ramler (2010, JCGS).
+Author: Ranjan Maitra and Ivan P. Ramler.
+  Packaged for R by Kurt Hornik.
+Maintainer: Kurt Hornik <Kurt.Hornik@R-project.org>
+License: file LICENSE
