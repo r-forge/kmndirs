@@ -25,13 +25,11 @@ void kmean_dirs(double **a, int m, int n, double **c, int k, int *ic1,int *nc,
 	   int iter,double *wss,int *ifault,double *normc);
 
 int run_kmndirs(double **X, int n, int p, double **mu, int K, int *id, 
-		double **startingmu, int iter,double *normc, int *nc,
-		int nrand)
+		int iter,double *normc, int *nc, int nrand)
 {
   int i=0;
 
   if(K == 1){
-    int j;
     double **ltsigma;
     for(i = 0; i < n; i++) id[i] = 0;
     
@@ -41,21 +39,14 @@ int run_kmndirs(double **X, int n, int p, double **mu, int K, int *id,
     spherize(mu, K, p);
 
     FREE_MATRIX(ltsigma);
-    
-    for(i = 0; i < K; i++){
-      for(j = 0; j < p; j++) startingmu[i][j] = mu[i][j];
-    }
   }
   else{
-    int j, ind, IFAULT, reqsvd = 0, startmeth = 0;
+    int IFAULT, reqsvd = 0, startmeth = 0;
     double *WSS;
     
     /* 1. Get starting values.  */
-    ind = kmeandirstarts(n, p, K, X, mu, reqsvd,startmeth,nrand);
-    for(i = 0; i < K; i++){
-      for(j = 0; j < p; j++) startingmu[i][j] = mu[i][j];
-    }
-    
+    i = kmeandirstarts(n, p, K, X, mu, reqsvd,startmeth,nrand);
+
     /*2. Run k-mean directions  */
     MAKE_VECTOR(WSS,K);
 /*    MAKE_VECTOR(nc,K);*/
