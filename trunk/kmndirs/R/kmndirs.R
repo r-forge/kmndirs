@@ -1,5 +1,5 @@
 kmndirs <-
-function(x, k, nruns = 100L, maxiter = 10L)
+function(x, k, nrandom = 100L, maxiter = 10L)
 {
     ## Currently only dense matrix support.
     x <- as.matrix(x)
@@ -8,6 +8,6 @@ function(x, k, nruns = 100L, maxiter = 10L)
 
     n <- nrow(x)
 
-    .C(R_kmndirs, x, n, ncol(x), as.integer(k), as.integer(nruns),
+    .C(R_kmndirs, x, n, ncol(x), as.integer(k), as.integer(nrandom),
        as.integer(maxiter), ids = integer(n))$ids
 }
