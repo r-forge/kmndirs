@@ -1,5 +1,5 @@
 kmndirs <-
-function(x, k, nrandom = 100L, maxiter = 10L)
+function(x, k, nrandom = 1000L, maxiter = 10L)
 {
     ## Currently only dense matrix support.
     x <- as.matrix(x)
