@@ -15,21 +15,23 @@
 /* #define PI 3.141592653589793 */
 #define EE 2.718281828459046
 
-
+#if 0
 long int random(void);   /* declare in order to avoid undef with ISO */
 void srandom(unsigned int seed); /* declare in order to avoid undef with ISO */
+#endif
+
 double rxxx1;
 int ixxx1=0;
 /*************************************/
 void setseed(unsigned int s)
 {
   /*srand48(s)*/
-  srandom(s);
+    srand(s);
 }
 /*************************************/
 long genseed(void)
 {
-  return((long)random());
+    return((long)rand());
 }
 /*************************************/
 double runi(void)
@@ -44,7 +46,7 @@ double runi(void)
    /*   return drand48(&idnum);*/
   /*   return drand48();*/
 
-  return ((double)random() + 0.5)/((double)RAND_MAX + 1.0);
+  return ((double)rand() + 0.5)/((double)RAND_MAX + 1.0);
 }
 /*************************************/
 double runir(double a,double b)
