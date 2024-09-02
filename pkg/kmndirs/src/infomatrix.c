@@ -7,7 +7,7 @@
 #include "array.h"
 #include "mat_vec.h"
 
-/* #define PI 3.141593 */
+#define PI 3.141593
 #define Inf 1e+143
 #define SQ(x) ((x) * (x))
 

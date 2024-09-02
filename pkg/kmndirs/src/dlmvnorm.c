@@ -4,7 +4,7 @@
 
 #include "array.h"
 
-/* #define PI 3.141593 */
+#define PI 3.141593
 #define Inf 1e+140
 
 double chisqstatlt(int p, double *X,double *mu,double *ltSigma,double *detSig);

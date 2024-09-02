@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "array.h"
 #include <math.h>
-/* #define PI 3.1415926535 */
+#define PI 3.1415926535
 #define NEG(x) ((x<0) ? 1 : 0)
 #define SIGN(x) ((x) > 0 ? 1 : -NEG(x)) /* mimics the Splus sign function */
 

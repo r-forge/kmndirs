@@ -3,7 +3,7 @@
 #include "array.h"
 #include <math.h>
 
-/* #define PI 3.141593 */
+#define PI 3.141593
 #define Inf 1e+140
 
 double dlmvnorm(double *x, int p, double *mu, double *LTsigma);

@@ -7,7 +7,7 @@
   to the Rmath's header file because this decides
   the definitions to be set. */
 #include <Rmath.h>
-/* #define PI 3.141593 */
+#define PI 3.141593
 #define Inf 1e+140
 #define SQ(x) ((x) * (x))
 

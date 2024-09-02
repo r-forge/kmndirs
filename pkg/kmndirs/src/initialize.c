@@ -12,7 +12,7 @@
 #include "quantile.h"
 #define Inf 1e+140
 #define SQ(x) ((x)*(x))
-/* #define PI 3.141593 */
+#define PI 3.141593
 
 void hclassify(int n,int m, double **x,int hcrit,int nclass,int *class);
 

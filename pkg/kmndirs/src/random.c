@@ -12,7 +12,7 @@
 
 #include <R.h>
 
-/* #define PI 3.141592653589793 */
+#define PI 3.141592653589793
 #define EE 2.718281828459046
 
 #if 0
