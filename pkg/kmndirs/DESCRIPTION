@@ -1,5 +1,5 @@
 Package: kmndirs
-Version: 0.0-0
+Version: 0.0-1
 Title: k-Mean-Directions Algorithm
 Description: An R interface to the k-Mean-Directions Algorithm of Maitra
   and Ramler (2010, JCGS).
