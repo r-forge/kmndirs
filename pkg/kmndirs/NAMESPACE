@@ -1,1 +1,2 @@
 useDynLib("kmndirs", "R_kmndirs")
+export("kmndirs")
